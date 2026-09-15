@@ -14,19 +14,31 @@ if st.button("Run analysis", type="primary") and question.strip():
     with st.spinner("Retrieving schema, validating SQL, and analyzing results..."):
         try:
             if DEMO_MODE:
-                payload = {
-                    "answer": "The top customers by revenue are Customer 001, Customer 002, and Customer 003 in this synthetic demo.",
-                    "execution_ms": 2.4,
-                    "rows": [
-                        {"customer_name": "Customer 001", "revenue": 98500.0},
-                        {"customer_name": "Customer 002", "revenue": 87300.0},
-                        {"customer_name": "Customer 003", "revenue": 76100.0},
-                    ],
-                    "sql": "SELECT customer_name, SUM(revenue) AS revenue\nFROM customer_revenue\nGROUP BY customer_name\nORDER BY revenue DESC\nLIMIT 10;",
-                    "validation": {"valid": True, "errors": []},
-                    "explanation": "Deterministic sample response for the public portfolio demo.",
-                    "context": {"mode": "demo", "source": "synthetic sample"},
-                }
+                unsafe_keywords = ("DROP", "DELETE", "TRUNCATE", "ALTER", "UPDATE", "INSERT", "CREATE", "MERGE")
+                if any(keyword in question.upper() for keyword in unsafe_keywords):
+                    payload = {
+                        "answer": "The request was rejected because the demo only supports read-only analysis.",
+                        "execution_ms": 0.1,
+                        "rows": [],
+                        "sql": None,
+                        "validation": {"valid": False, "errors": ["Mutation operations are not allowed."]},
+                        "explanation": "The public demo blocks mutation keywords before generating or executing SQL.",
+                        "context": {"mode": "demo", "source": "synthetic sample"},
+                    }
+                else:
+                    payload = {
+                        "answer": "The top customers by revenue are Customer 001, Customer 002, and Customer 003 in this synthetic demo.",
+                        "execution_ms": 2.4,
+                        "rows": [
+                            {"customer_name": "Customer 001", "revenue": 98500.0},
+                            {"customer_name": "Customer 002", "revenue": 87300.0},
+                            {"customer_name": "Customer 003", "revenue": 76100.0},
+                        ],
+                        "sql": "SELECT customer_name, SUM(revenue) AS revenue\nFROM customer_revenue\nGROUP BY customer_name\nORDER BY revenue DESC\nLIMIT 10;",
+                        "validation": {"valid": True, "errors": []},
+                        "explanation": "Deterministic sample response for the public portfolio demo.",
+                        "context": {"mode": "demo", "source": "synthetic sample"},
+                    }
             else:
                 response = requests.post(f"{API_URL}/api/v1/query", json={"question": question}, timeout=30)
                 payload = response.json()
