@@ -29,7 +29,7 @@ def connection():
 def database_ready() -> bool:
     try:
         with connection() as conn:
-            conn.execute(text("SELECT 1"))
+            conn.execute(text("SELECT COUNT(*) FROM departments"))
         return True
     except Exception:
         return False
