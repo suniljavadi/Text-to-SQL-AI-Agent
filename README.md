@@ -1,5 +1,7 @@
 # Enterprise Text-to-SQL AI Agent
 
+**Status: Completed portfolio implementation with synthetic data and deterministic fallback mode**
+
 A production-style portfolio project that converts business questions into safe, explainable SQL over synthetic sales data. It demonstrates SQL Server/T-SQL thinking, dimensional modeling, ETL-style seeding, RAG, tool-calling agents, FastAPI, Streamlit, PostgreSQL, Docker, evaluation, and defensive SQL engineering.
 
 ## Business Problem
@@ -124,7 +126,7 @@ git init
 git add .
 git commit -m "Build enterprise text-to-SQL AI agent"
 git branch -M main
-git remote add origin https://github.com/<your-user>/<your-repository>.git
+git remote add origin https://github.com/suniljavadi/Text-to-SQL-AI-Agent.git
 git push -u origin main
 ```
 
