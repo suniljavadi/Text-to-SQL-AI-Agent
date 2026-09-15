@@ -4,6 +4,12 @@
 
 A production-style portfolio project that converts business questions into safe, explainable SQL over synthetic sales data. It demonstrates SQL Server/T-SQL thinking, dimensional modeling, ETL-style seeding, RAG, tool-calling agents, FastAPI, Streamlit, PostgreSQL, Docker, evaluation, and defensive SQL engineering.
 
+## Live Demo
+
+[Open the deployed Streamlit app](https://suniljavadi.streamlit.app/)
+
+The public deployment was verified with its deterministic synthetic demo workflow. Configure `API_URL` to connect the UI to a separately deployed FastAPI service for live backend execution.
+
 ## Business Problem
 Business users often need answers from operational and warehouse data but cannot write SQL. A useful assistant must understand business definitions, retrieve relevant schema, generate SQL, validate it, execute only read-only statements, and explain the result without inventing values.
 
