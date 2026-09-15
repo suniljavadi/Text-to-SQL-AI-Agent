@@ -83,6 +83,8 @@ streamlit run streamlit_app/app.py
 ```
 Open `http://localhost:8501` and API docs at `http://localhost:8000/docs`.
 
+The public Streamlit deployment runs in clearly labeled deterministic demo mode unless `API_URL` is configured. Set `API_URL` to a reachable FastAPI deployment to enable live query execution from the hosted UI.
+
 ## Docker
 ```powershell
 docker compose up --build
