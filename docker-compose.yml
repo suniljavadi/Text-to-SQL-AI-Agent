@@ -1,0 +1,35 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: textsql
+      POSTGRES_USER: textsql_readonly
+      POSTGRES_PASSWORD: textsql_password
+    ports: ["5432:5432"]
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - ./database/seed_data.py:/seed_data.py:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U textsql_readonly -d textsql"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+  api:
+    build: .
+    environment:
+      DATABASE_URL: postgresql+psycopg://textsql_readonly:textsql_password@db:5432/textsql
+      PYTHONPATH: /app
+    depends_on:
+      db: { condition: service_healthy }
+    ports: ["8000:8000"]
+    command: sh -c "python database/seed_data.py && uvicorn app.main:app --host 0.0.0.0 --port 8000"
+  ui:
+    build: .
+    environment:
+      API_URL: http://api:8000
+    depends_on: [api]
+    ports: ["8501:8501"]
+    command: streamlit run streamlit_app/app.py --server.address 0.0.0.0 --server.port 8501
+volumes:
+  pgdata:

@@ -1,0 +1,411 @@
+{
+  "question_count": 50,
+  "sql_validity": 1.0,
+  "execution_accuracy": 0.9,
+  "semantic_correctness": 0.8,
+  "retrieval_quality": 1.0,
+  "failure_rate": 0.1,
+  "average_latency_ms": 5.85,
+  "details": [
+    {
+      "id": "q01",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 22.18,
+      "error": null
+    },
+    {
+      "id": "q02",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 7.8,
+      "error": null
+    },
+    {
+      "id": "q03",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 4.79,
+      "error": null
+    },
+    {
+      "id": "q04",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 5.44,
+      "error": null
+    },
+    {
+      "id": "q05",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 2.86,
+      "error": null
+    },
+    {
+      "id": "q06",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 5.44,
+      "error": null
+    },
+    {
+      "id": "q07",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 1.78,
+      "error": null
+    },
+    {
+      "id": "q08",
+      "valid": true,
+      "executed": true,
+      "semantic_match": false,
+      "latency_ms": 1.45,
+      "error": null
+    },
+    {
+      "id": "q09",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 2.84,
+      "error": null
+    },
+    {
+      "id": "q10",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 2.54,
+      "error": null
+    },
+    {
+      "id": "q11",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 1.78,
+      "error": null
+    },
+    {
+      "id": "q12",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 5.04,
+      "error": null
+    },
+    {
+      "id": "q13",
+      "valid": true,
+      "executed": true,
+      "semantic_match": false,
+      "latency_ms": 2.06,
+      "error": null
+    },
+    {
+      "id": "q14",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 1.43,
+      "error": null
+    },
+    {
+      "id": "q15",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 2.71,
+      "error": null
+    },
+    {
+      "id": "q16",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 2.47,
+      "error": null
+    },
+    {
+      "id": "q17",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 2.18,
+      "error": null
+    },
+    {
+      "id": "q18",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 4.63,
+      "error": null
+    },
+    {
+      "id": "q19",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 3.07,
+      "error": null
+    },
+    {
+      "id": "q20",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 1.45,
+      "error": null
+    },
+    {
+      "id": "q21",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 1.86,
+      "error": null
+    },
+    {
+      "id": "q22",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 2.42,
+      "error": null
+    },
+    {
+      "id": "q23",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 2.21,
+      "error": null
+    },
+    {
+      "id": "q24",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 4.83,
+      "error": null
+    },
+    {
+      "id": "q25",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 3.21,
+      "error": null
+    },
+    {
+      "id": "q26",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 1.51,
+      "error": null
+    },
+    {
+      "id": "q27",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 2.0,
+      "error": null
+    },
+    {
+      "id": "q28",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 2.42,
+      "error": null
+    },
+    {
+      "id": "q29",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 2.48,
+      "error": null
+    },
+    {
+      "id": "q30",
+      "valid": true,
+      "executed": true,
+      "semantic_match": false,
+      "latency_ms": 1.34,
+      "error": null
+    },
+    {
+      "id": "q31",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 3.13,
+      "error": null
+    },
+    {
+      "id": "q32",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 4.66,
+      "error": null
+    },
+    {
+      "id": "q33",
+      "valid": true,
+      "executed": false,
+      "semantic_match": false,
+      "latency_ms": 22.62,
+      "error": "The question is ambiguous. Please specify a business metric, table, or dimension."
+    },
+    {
+      "id": "q34",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 8.85,
+      "error": null
+    },
+    {
+      "id": "q35",
+      "valid": true,
+      "executed": true,
+      "semantic_match": false,
+      "latency_ms": 7.16,
+      "error": null
+    },
+    {
+      "id": "q36",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 3.45,
+      "error": null
+    },
+    {
+      "id": "q37",
+      "valid": true,
+      "executed": false,
+      "semantic_match": false,
+      "latency_ms": 23.54,
+      "error": "The question is ambiguous. Please specify a business metric, table, or dimension."
+    },
+    {
+      "id": "q38",
+      "valid": true,
+      "executed": true,
+      "semantic_match": false,
+      "latency_ms": 4.23,
+      "error": null
+    },
+    {
+      "id": "q39",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 3.12,
+      "error": null
+    },
+    {
+      "id": "q40",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 2.14,
+      "error": null
+    },
+    {
+      "id": "q41",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 6.29,
+      "error": null
+    },
+    {
+      "id": "q42",
+      "valid": true,
+      "executed": true,
+      "semantic_match": false,
+      "latency_ms": 3.29,
+      "error": null
+    },
+    {
+      "id": "q43",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 4.35,
+      "error": null
+    },
+    {
+      "id": "q44",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 4.1,
+      "error": null
+    },
+    {
+      "id": "q45",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 6.34,
+      "error": null
+    },
+    {
+      "id": "q46",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 2.53,
+      "error": null
+    },
+    {
+      "id": "q47",
+      "valid": true,
+      "executed": true,
+      "semantic_match": true,
+      "latency_ms": 3.1,
+      "error": null
+    },
+    {
+      "id": "q48",
+      "valid": true,
+      "executed": false,
+      "semantic_match": false,
+      "latency_ms": 22.76,
+      "error": "The question is ambiguous. Please specify a business metric, table, or dimension."
+    },
+    {
+      "id": "q49",
+      "valid": true,
+      "executed": false,
+      "semantic_match": false,
+      "latency_ms": 24.3,
+      "error": "The question is ambiguous. Please specify a business metric, table, or dimension."
+    },
+    {
+      "id": "q50",
+      "valid": true,
+      "executed": false,
+      "semantic_match": true,
+      "latency_ms": 24.39,
+      "error": "I can only answer safe analytical questions about the synthetic business database."
+    }
+  ]
+}

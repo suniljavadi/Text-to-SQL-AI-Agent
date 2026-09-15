@@ -1,0 +1,15 @@
+CATALOG = [
+ {"type":"table","name":"customers","text":"customers: customer_id, customer_name, email, city, segment, signup_date. Customer master data."},
+ {"type":"table","name":"products","text":"products: product_id, product_name, category, unit_price, cost, active. Product catalog."},
+ {"type":"table","name":"orders","text":"orders: order_id, customer_id, employee_id, order_date, status, shipping_city. Order header; completed orders represent realized sales."},
+ {"type":"table","name":"order_items","text":"order_items: order_item_id, order_id, product_id, quantity, unit_price. Line items; revenue is quantity multiplied by unit_price."},
+ {"type":"table","name":"employees","text":"employees: employee_id, department_id, first_name, last_name, email, hire_date, salary."},
+ {"type":"table","name":"departments","text":"departments: department_id, name, location. Organizational departments."},
+ {"type":"relationship","name":"orders_customers","text":"orders.customer_id joins customers.customer_id."},
+ {"type":"relationship","name":"order_lines","text":"order_items.order_id joins orders.order_id and order_items.product_id joins products.product_id."},
+ {"type":"relationship","name":"employees_departments","text":"employees.department_id joins departments.department_id."},
+ {"type":"definition","name":"revenue","text":"Revenue = SUM(order_items.quantity * order_items.unit_price), normally filtered to completed orders."},
+ {"type":"definition","name":"active_customer","text":"Active Customer = customer with at least one completed order in the last 90 days."},
+ {"type":"definition","name":"average_order_value","text":"Average Order Value = completed revenue divided by completed order count."},
+ {"type":"kpi","name":"gross_margin","text":"Gross Margin = revenue minus quantity multiplied by product cost."},
+]
